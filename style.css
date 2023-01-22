@@ -403,12 +403,12 @@ button{
 }
 /*Swiper*******************/
 .pet-projects{
-
+    position: relative;
 }
 
 .pet-projects__list{
     display: flex;
-    
+    overflow: hidden;
 }
 .pet-project__item{
     max-width: 100%;
@@ -453,6 +453,31 @@ button{
 }
 .pet-card__link:hover{
     border-bottom: 1px solid #28AE60;
+}
+.slider-btn--prev,
+.slider-btn--next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(50%);
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #28AE60;
+    color: #ffff;
+    border: 1px solid transparent;
+    transition: all .4s ease;
+}
+.slider-btn--prev:hover,
+.slider-btn--next:hover{
+    background-color: #ffff;
+    color: #28AE60;
+    border: 1px solid #28AE60;
+}
+.slider-btn--prev{
+    left: 20px;
+}
+.slider-btn--next{
+    right: 20px;
 }
 
 /*FAQ*/
