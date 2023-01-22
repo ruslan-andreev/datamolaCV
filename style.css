@@ -187,7 +187,7 @@ button{
     color: #28AE60;
     position: absolute;
     left: 50%;
-    bottom: 2.5rem;
+    bottom: 3.5rem;
     transform: translateX(-50%);
     font-size: 2rem;
     font-weight: bold;
@@ -401,7 +401,7 @@ button{
 .freelance-card__link--disabled:hover{
     border-bottom: 1px solid #2c2c2c73;
 }
-/*Swiper*******************/
+/*SLIDER*/
 .pet-projects{
     position: relative;
 }
@@ -454,21 +454,22 @@ button{
 .pet-card__link:hover{
     border-bottom: 1px solid #28AE60;
 }
-.slider-btn--prev,
-.slider-btn--next{
+.slider-btn{
     position: absolute;
     top: 50%;
-    transform: translateY(50%);
+    transform: translateY(-50%);
     width: 46px;
     height: 46px;
     border-radius: 50%;
     background-color: #28AE60;
     color: #ffff;
+    font-size: 1.6rem;
+    line-height: 1;
     border: 1px solid transparent;
     transition: all .4s ease;
 }
-.slider-btn--prev:hover,
-.slider-btn--next:hover{
+.slider-btn:hover,
+.slider-btn:hover{
     background-color: #ffff;
     color: #28AE60;
     border: 1px solid #28AE60;
@@ -479,6 +480,13 @@ button{
 .slider-btn--next{
     right: 20px;
 }
+.slider-btn--prev::before{
+    content: '\AB';    
+}
+.slider-btn--next::before{
+    content: '\BB';
+}
+
 
 /*FAQ*/
 .section-faq{

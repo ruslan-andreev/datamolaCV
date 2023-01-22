@@ -1,16 +1,16 @@
 class AccordionElement extends HTMLElement {
     constructor(){
-        super()
-        this.attachShadow({mode: "open"})
+        super();
+        this.attachShadow({mode: "open"});
     }
 
     connectedCallback() {
         this.render();
-    }
+    };
 
     disconnectedCallback() {
         this.shadowRoot.querySelector('.accordion-button').removeEventListener('click', this.toggleAccordion);
-      }
+    };
     _styles(){
         return `<style>
         
@@ -36,6 +36,7 @@ class AccordionElement extends HTMLElement {
             color: #1A1F29;
             background-color: #ffff;
             position: relative;
+            cursor: pointer;
         }
         
         .accordion-button::after{
@@ -70,6 +71,7 @@ class AccordionElement extends HTMLElement {
             max-height: 0;
             overflow: hidden;
             padding-bottom: 0;
+            font-size: 1rem;
             transition: all .2s ease;
         } 
         .accordion__description--visible{
@@ -82,26 +84,26 @@ class AccordionElement extends HTMLElement {
     }
     _template(){
         return `
-        <li class="accordion__item">
+        <div class="accordion__item">
             <h2 class="accordion__title">
                 <button class="accordion-button accordion-button--closed" type="button"><span><slot name="text-button">Default button text</slot></span></button>	
             </h2>							
             <p class="accordion__description"><slot name="accordion-description"/>
             Default accordion description text.
             </p>
-        </li>
+        </div>
         `
-    }
+    };
     render(){
         this.shadowRoot.innerHTML += `${this._styles()} ${this._template()}` 
         this.shadowRoot.querySelector('.accordion-button').addEventListener('click', this.toggleAccordion.bind(this));
         
-    }
+    };
     
     toggleAccordion(){
-        this.shadowRoot.querySelector('.accordion-button').classList.toggle('accordion-button--closed')
-        this.shadowRoot.querySelector('.accordion__description').classList.toggle('accordion__description--visible')
-    }
+        this.shadowRoot.querySelector('.accordion-button').classList.toggle('accordion-button--closed');
+        this.shadowRoot.querySelector('.accordion__description').classList.toggle('accordion__description--visible');
+    };
 
     
 }

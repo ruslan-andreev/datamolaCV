@@ -47,12 +47,11 @@
     }   
     
 }
+
 @media screen and (max-width: 980px){
     .about-content__image{
         padding: 0 1.75rem;
     }
-}
-@media screen and (max-width: 980px){
     .skills__item{
         width: calc(50% - 1.25rem);
         margin-bottom: 1.125rem;
@@ -62,11 +61,14 @@
     }
     .aducation-list__item{
         width: calc(50% - 1.25rem);
-        margin-bottom: 1.25rem;
+        margin-bottom: 1.5rem;
     }
     .freelance__item {
         width: calc(50% - 1.25rem);
-        margin-bottom: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+    .pet-card {
+        width: 80%;
     }
 }
 @media screen and (max-width: 860px){
@@ -126,10 +128,15 @@
         width: 100%;
         margin-bottom: 1.25rem;
     }
-
-    .swiper-button-prev,
-    .swiper-button-next{
-        display: none;
+    .slider-btn{
+        width: 36px;
+        height: 36px;
+    }    
+    .slider-btn--prev{
+        left: -0.5rem;
+    }
+    .slider-btn--next{
+        right: -0.5rem;
     }
 }
 @media screen and (max-width: 475px){
