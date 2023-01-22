@@ -1,5 +1,5 @@
 const links = document.querySelectorAll('.site-link')
-//const continueBtn = document.getElementById('continue-button')
+
 const HEADER_OFFSET = 66
 
 links.forEach(element => {

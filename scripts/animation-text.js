@@ -1,10 +1,10 @@
 const header = document.querySelector('.heading-primary')
 const continueBtn = document.querySelector('.continue-button')   
 window.onload = setTimeout(()=>{
-    textanimation(continueBtnAnimation)
+    textAnimation(continueBtnAnimation)
     
 }, 500)
-function textanimation(continueBtnAnimatio){
+function textAnimation(continueBtnAnimatio){
     header.classList.add('heading-primary--active')
     setTimeout(()=>{
         continueBtnAnimatio()

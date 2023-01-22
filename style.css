@@ -402,60 +402,26 @@ button{
     border-bottom: 1px solid #2c2c2c73;
 }
 /*Swiper*******************/
+.pet-projects{
 
-.projects-swiper{
-    overflow: hidden;
-    position: relative;
-    padding: 1.25rem 0 2rem 0;
+}
+
+.pet-projects__list{
+    display: flex;
     
 }
-.swiper-wrapper{
-    
-}
-.swiper-slide{
-   height: auto;
-   
-}
-
-.projects-swiper .swiper-button-next,
-.projects-swiper .swiper-button-prev{
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
-    background-color: #28AE60;
-    border: 1px solid transparent;
+.pet-project__item{
+    max-width: 100%;
+    flex-shrink: 0;
     transition: all .4s ease;
-}
-.projects-swiper .swiper-button-next:hover,
-.projects-swiper .swiper-button-prev:hover{
-    border: 1px solid #28AE60;
-    background-color: #ffff;
-}
-.projects-swiper .swiper-button-next::after,
-.projects-swiper .swiper-button-prev::after{
-    color: #ffff;
-    font-size: 1.125rem;
-    font-weight: bold; 
-    transition: all .4s ease;
-}
-.projects-swiper .swiper-button-next:hover::after,
-.projects-swiper .swiper-button-prev:hover::after{
-    color: #28AE60;
-}
-
-.projects-swiper .swiper-pagination{
-    bottom: 0;
-}
-.projects-swiper .swiper-pagination-bullet{
-   background-color:#28AE60;
-   width: 0.85rem;
-   height: 0.85rem;
 }
 .pet-card{
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%; 
+    height: 100%;
+    margin: 0 auto;
 }
 .pet-card__image-wrapper{
     margin-bottom: 0.75rem;
